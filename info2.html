@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>NBA球場的秘密</title>
+    <meta charset="utf-8" />
+	<link href="subCss/ddmenu.css" rel="stylesheet" type="text/css" />
+    <script src="subJs/ddmenu.js" type="text/javascript"></script>
+    <style type="text/css">
+		body{font-family:微軟正黑體;
+		}
+		#teamName	{
+						margin-top:100px;
+						text-align:center;
+						font-size:45px;}
+		#s{
+						font-size:45px;
+						font-weight:bold;
+						color:#000000;
+				}
+		#s:hover{
+						color:#FFFFFF;
+						transition:color 2s;
+						-moz-transition:color 2s;
+						-webkit-transition:color 2s;
+						-o-transition:color 2s;    
+				}
+		.content	{
+						padding:20px;
+						background:#DDDDDD;
+						width:75%;
+						height:500px;
+						margin:0 auto;
+						margin-top:50px;
+						z-index:100;
+					}
+		p			{
+		
+						font-size:17px;
+						color:#666666
+					}
+		.linkPicture {
+					font-weight:bold;
+					color:#444444;
+		
+		}
+		.linkPicture:hover{
+						text-decoration:underline;
+						color:#000000
+						}
+		cimg		{
+					margin:0 auto;
+					z-index:200;
+
+		}
+						
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="malihu/jquery.mCustomScrollbar.concat.min.js"></script>
+	<link rel="stylesheet" href="malihu/jquery.mCustomScrollbar.css" />
+	<script>
+		(function($){
+			$(window).load(function(){
+			$(".content").mCustomScrollbar({ theme:"rounded"});
+		});
+		})(jQuery);
+		
+
+
+		function display( imgfile )
+		{
+
+			var cimg = document.getElementById( "cimg" );
+			cimg.innerHTML=("<img src = '"+imgfile+"' alt = 'picture' height=100%;width=100%; style='border:3px black solid;'>");
+		} // end function display
+		
+		function start()
+		{
+			document.getElementById( "img1" ).addEventListener(
+				"mouseover", function() { display( "malihu/1.jpg" ); }, false );
+			document.getElementById( "img2" ).addEventListener(
+				"mouseover", function() { display( "malihu/2.jpg" ); }, false );
+			document.getElementById( "img3" ).addEventListener(
+				"mouseover", function() { display( "malihu/3.jpg" ); }, false );
+			document.getElementById( "img4" ).addEventListener(
+				"mouseover", function() { display( "malihu/4.jpg" ); }, false );
+			document.getElementById( "img5" ).addEventListener(
+				"mouseover", function() { display( "malihu/5.jpg" ); }, false );
+		} // end function start
+
+	window.addEventListener( "load", start, false );
+	</script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$('#cimg').hide();  //隱藏要呼叫的div
+
+			// toggles the slickbox on clicking the noted link 
+				$('#img1').hover(function() {       //指定呼叫按鈕
+				$('#cimg').slideToggle(400);   //顯示隱藏的div
+			return false;
+			});
+				$('#img2').hover(function() {       //指定呼叫按鈕
+				$('#cimg').slideToggle(400);   //顯示隱藏的div
+			return false;
+			});
+				$('#img3').hover(function() {       //指定呼叫按鈕
+				$('#cimg').slideToggle(400);   //顯示隱藏的div
+			return false;
+			});
+				$('#img4').hover(function() {       //指定呼叫按鈕
+				$('#cimg').slideToggle(400);   //顯示隱藏的div
+			return false;
+			});
+				$('#img5').hover(function() {       //指定呼叫按鈕
+				$('#cimg').slideToggle(400);   //顯示隱藏的div
+			return false;
+			});
+			
+		});
+</script>
+	
+</head>
+
+
+<body>
+
+
+	<div  style="z-index:1; left:20%; width:60%; position: absolute;">
+        <div> 
+			<h1 id = "teamName"> NBA 球場的<span id="s">秘密</span>！</h2> 
+		</div>
+		
+		<nav id="ddmenu">
+			<ul>
+				<li class="full-width">
+					<a class="top-heading" href="index.html">HOME</a>
+				</li>
+						   
+				<li>
+					<span class="top-heading">EAST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Atlantic</h3></li>
+								<li><a href="celtics.html">Boston Celtics</a></li>
+								<li><a href="nets.html">Brooklyn Nets</a></li>
+								<li><a href="knicks.html">New York Knicks</a></li>
+								<li><a href="76ers.html">Philadelphia 76ers</a></li>
+								<li><a href="raptors.html">Toronto Raptors</a></li>
+							
+								<li><h3>Central</h3></li>
+								<li><a href="bulls.html">Chicago Bulls</a></li>
+								<li><a href="cavaliers.html">Cleveland Cavaliers</a></li>
+								<li><a href="pistons.html">Detroit Pistons</a></li>
+								<li><a href="pacers.html">Indiana Pacers</a></li>
+								<li><a href="bucks.html">Milwaukee Bucks</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southeast</h3></li>
+								<li><a href="hawks.html">Atlanta Hawks</a></li>
+								<li><a href="hornets.html">Charlotte Hornets</a></li>
+								<li><a href="heat.html">Miami Heat</a></li>
+								<li><a href="magic.html">Orlando Magic</a></li>
+								<li><a href="wizards.html">Washington Wizards</a></li>
+													
+								<li><br /><img src="east.jpg" height= "150px" width = "150px"/></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span class="top-heading">WEST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Northwest</h3></li>
+									<li><a href="nuggets.html">Denver Nuggets</a></li>
+									<li><a href="timberwolves.html">Minnesota Timberwolves</a></li>
+									<li><a href="thunder.html">Oklahoma City Thunder</a></li>
+									<li><a href="blazers.html">Portland Trail Blazers</a></li>
+									<li><a href="jazz.html">Utah Jazz</a></li>
+							
+									<li><h3>Pacific</h3></li>
+									<li><a href="warriors.html">Golden State Warriors</a></li>
+									<li><a href="clippers.html">Los Angeles Clippers</a></li>
+									<li><a href="lakers.html">Los Angeles Lakers</a></li>
+									<li><a href="suns.html">Phoenix Suns</a></li>
+									<li><a href="kings.html">Sacramento Kings</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southwest</h3></li>
+								<li><a href="mavericks.html">Dallas Mavericks</a></li>
+								<li><a href="rockets.html">Houston Rockets</a></li>
+								<li><a href="grizzlies.html">Memphis Grizzlies</a></li>
+								<li><a href="pelicans.html">New Orleans Pelicans</a></li>
+								<li><a href="spurs.html">San Antonio Spurs</a></li>
+							
+								<li><br /><img src="west.jpg" height= "150px" width = "150px" /></li>
+							</ul>
+						</div>
+					</div>
+				</li>			
+				<li>
+					<span class="top-heading">OTHERS</span>
+					<i class="caret"></i>
+					<div class="dropdown right-aligned">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Information</h3></li>
+								<li><a href="info.html">NBA球場怎麼蓋</a></li>
+								<li><a href="info2.html">NBA球場的秘密</a></li>
+							</ul>											
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="content">
+			<p>摘自NBA專欄</p>
+			<p>兩週前的12月31日，湖人客場122-104戰勝塞爾提克，Kobe出戰33分鐘，18投5中得到15分11個籃板。職業生涯最後一次做客北岸花園球館，本賽季第一次拿下雙十，一場對陣宿敵的勝利對Kobe來算得上完美結局。比賽開始前，Kobe還接受了塞爾提克方面一份特殊的禮物：<span class="linkPicture" id="img1">一塊北岸花園主場地板</span>，裱起來的地板上還有一行小字：“以此紀念你在這塊地板上無數的傳奇表演-亦敵亦友的塞爾提克。”</p>
+			<p>縱觀NBA超過60年歷史，沒有哪一名球員得到過另一支球隊如此高規格的待遇。北岸花園球館1993年動工，1995年正式投入使用，1996年夏天Kobe進入聯盟，1998年，塞爾提克前主場波士頓花園球館被拆毀，其中大部分地板已被提前轉移到北岸花園。在北岸花園目前使用的紅木鑲花地板裡，有一些甚至從1946年塞爾提克建隊起就存在了。所以很可能，這塊地板真的見證過Kobe在這座球館的每一場比賽，因為自北岸花園球館建成以來，20年裡塞爾提克的主場地板只有在極度破舊的情況下才會考慮更換。</p>
+			<p>2012年東區決賽，三巨頭領軍的熱火和塞爾提克捉對廝殺，第三場和第四場都在綠軍主場進行。熱火休賽日訓練時，有兩位細心的跟隊記者發現了花園球館的地板問題。按照慣例，NBA球館的地板都是一塊塊拼接起來的，其他29支球隊慣用的楓木地板質地堅硬，且按照NBA官方要求至少10年更換一次，平時維護也很用心，偏偏塞爾提克堅守著紅木鑲花地板的傳統，20年不換，想什麼時候維護就什麼時候維護，NBA官方也默許了這支老牌強隊的江湖地位。</p>
+			<p>因使用年限太久，紅木地板質量也不如硬楓木地板，<span class="linkPicture" id="img2">花園球館</span>有些地方地板和地板的連接處縫隙很大，甚至連線都沒有對齊，導致地板凹凸不平。兩位記者饒有興致的拍照發到Twitter之後，隨隊征戰的熱火老闆不僅轉發了Twitter，還配上了一條文字：“我覺得NBA應該考察一下這些東西，為什麼這樣的一個地方還能叫做花園？”</p>
+			<p>按下塞爾提克這個特例不表，我們來表一表聯盟其他29支球隊的主場地板，NBA級別場館地板的原材料都是一樣的：生長在美國中西部（主要是威斯康星和密歇根）的硬楓樹林，北緯緯度為30到40度之間，這個緯度上生長的楓木製成地板最適合用於籃球比賽。如果楓木生長地太靠南，樹木的生長速度就會過快，導致木質疏鬆硬度和耐用度不足；生長地太靠北，樹木生長的速度又太慢，讓木質顯得過硬，彈性太差。</p>
+			<p>使用楓木製成的地板除了質地夠硬，能耐得住一個賽季的NBA比賽和大約70次的拆裝過程外，還有一個更重要的好處：它的反光能力很好，不僅能讓球員更容易判斷球的運動軌跡，還能讓球場顯得更加明亮，讓現場和電視機前的觀眾獲得更好的觀賽體驗。同時真皮籃球在楓木地板上反彈的手感也很好，便於球員更好的控制球，才能像Curry那樣，演繹出各種神鬼莫測的花式運球過人。</p>
+			<p>目前，NBA各大場館的地板都由三家公司提供，霍納地板公司、羅賓斯地板公司，以及康納運動地板公司，這三大地板公司都從前文提到的同一片硬楓樹林採伐原料。羅賓斯最大牌的客戶是騎士，康納運動最大的客戶則是勇士，霍納發源於1891年，在三家公司裡資格最老，他們的客戶雖然少些，名氣也小些（比如金塊），卻是每一年全明星賽固定的地板供應商，至今已有30年時間。</p>
+			<p>一座標準的NBA籃球場尺寸是固定的：長94英尺（28.65公尺），寬50英尺（15.24公尺），每一塊NBA籃球場地板的尺寸也是固定的：長2.4公尺，寬1.2公尺，一共220塊地板，像拼圖一樣拼起整塊場地。</p>
+			<p>每個賽季一座球館的地板投入使用前，地板公司都會先詢問球館方面有什麼設計上的特殊要求，NBA官方logo、球隊logo、球隊隊徽、球館logo、城市昵稱是固定組成部分，還可能有球隊當季的宣傳語，球隊的官網地址，官方Twitter等不同的設計圖案，瞭解完這些需求後，地板公司就會進行上色、刷漆，最後再塗上一層高光澤度的聚氨酯（俗稱打蠟），起到防水、防汙，提升抓地力的作用。</p>
+			<p>做完這些措施後，工作人員會將每一塊地板進行<span class="linkPicture" id="img3">詳細的編號</span>，一般用字母來表示橫向的序號，數字來表示豎向的序號，這樣才能保證下一次安裝地板的時候不會弄錯位置，也能節省工作時間。和地板10年內必須更換的標準比起來，logo塗層和防水層都必須每年更換一次，除了每一年球隊方面的要求都會不同外，還有保證logo的顏色、光澤度如新，以及防水層的效果方面的更新。</p>
+			<p>大家都知道，NBA球館並不是單獨用於NBA比賽的，絕大多數NBA球館需要和NHL（北美冰球聯賽）比賽共用，還得承擔一些演唱會、雜技團的娛樂活動。尤其冰球是在冰面上進行，再鋪上NBA比賽使用的地板，就會有漏水的風險。</p>
+			<p>本賽季季前賽勇士和湖人的比賽是在聖地亞哥一座綜合球館裡進行的，這裡是NHL聖迭戈海鷗的主場，近年鮮有舉辦籃球比賽，該球館建於1966年，上世紀6、70年代曾是火箭和快船的主場球館，因為老舊失修和主要進行冰球比賽出現滲水，多名球員在比賽中意外滑倒，“這很不安全。”當值裁判表示，比賽打到第三節還剩3分20秒，裁判就以地板太滑為理由叫停了比賽，引起到場球迷不滿，遲遲不願離場，最終NBA方面對球迷致歉，並且全額退票。</p>
+			<p>地板滲水!湖人勇士球員連滑倒 裁判鳴哨取消比賽</p>
+			<p>出於保護球員的考慮，裁判叫停比賽無可厚非，這場比賽地板滲水的主要原因還是球館過於老舊，地板的質量不該背鍋。NBA使用的楓木地板分為3個等級，光亮度和硬度逐級提升，如果球隊希望地板看上去明亮一些，供應商就會更多使用1級地板，如果球隊希望地板的亮度有層次感，或需要其他的款式，供應商也不介意將固定尺寸的地板提前拼接成讓用戶滿意的規格。相對來說，比賽場館的地板質量最好，球員訓練館的地板也由這三家公司提供，但質量稍差。</p>
+			<p>一塊標準的NBA比賽用楓木地板由五個部分組成：最下面一層是基板（保護層），起到隔開冰場或者水泥地板的作用；第二層是防潮膠墊，進一步隔絕水汽，保護地板；第三層是彈力軟墊，有助於衝擊力的吸收，減輕球員在地板上因彈跳帶來的震動；第四層是松木等硬木製作的木枋，起緩衝作用，最後才是真正的楓木地板，每一塊楓木地板厚度都一樣，約為0.75英寸，這是自19世紀楓木第一次被用作籃球場地板起，就被固定下來的傳統。</p>
+			<p>其中彈力軟墊的使用很有講究，彈力軟墊使用的越多，地板吸收的能量就越多，如果吸收的能量過分，球員在跑動，運球的時候便得不到足夠的反作用力，可能產生在沙地或者水裡打球的感覺，在有些球館裡（各個球館自身地板的彈力不同），供應商會按照球隊或NBA的要求使用不同數量的彈力軟墊，目的是讓球員得到最好的比賽體驗。</p>
+			<p>每一次球隊主場比賽需要更換地板時，工作人員都會用<span class="linkPicture" id="img4">叉車</span>將放在球館庫房的地板取出來運到場邊，按照保護層、防潮膠墊、彈力軟墊、楓木地板（硬木木枋是和地板本身連在一起的）的順序，和提前標註在地板上的編號，像砌磚牆一樣一塊一塊的擺放好，確認過地板與地板之間嚴絲密合，沒有明顯空隙之後，再推出兩側的籃架，調整計時器，安排場邊座位等等設施，這就是球迷們在現場和電視上看到的NBA球館了。鋪設地板的過程通常要幾個小時，動用數十名工作人員。</p>
+			<p>綜上所述，NBA比賽的學問大，關於球館地板的講究也不少。硬楓木地板屬於工業時代的產品，唯有塞爾提克還守護著他們的鑲花紅木地板的傳統。據說上世紀80年代湖人、塞爾提克爭雄，“紅衣主教”Auerbach想了很多盤外招，比如波士頓花園球館沒有空調，Jabbar這種上了年紀的球員到第四節就喘不過氣，對陣湖人時Auerbach會找人收緊籃網，上緊籃板和籃筐上的螺絲，籃網緊會讓球投進去了不好出來，螺絲緊會讓籃筐更硬，影響中遠投命中率，湖人就打不了快攻，遠投命中率降低，只能在籃下和塞爾提克貼身肉搏。</p>
+			<p>甚至地板也可以被用作“祕密武器”：綠軍主場地板老舊失修，本就已經凹凸不平，據傳還有幾塊地板幾乎拍不起球來，只有塞爾提克自己的球員才知道在這幾塊地板上如何運球才不容易被抄，比賽中塞爾提克球員會將對方球員壓迫到這些“陷阱”附近，下手抄截。湖人吃過幾次虧之後做的更絕，Pat Riley專門請人看影片繪製了比賽地板圖，每一次到客場打塞爾提克，都會提前警告球員，運球的時候儘量避開這些危險區域。</p>
+			<p>這些陰謀論並非瞎猜，都是80年代初期曾效力塞爾提克，後來還當過塞爾提克主帥和管理層親口承認的，不過Auerbach本人並沒有鬆口，在他的口述自傳《讓我來跟你說個故事》裡有這麼一段：“波士頓花園球館的地板之所以有坑，並不是球隊故意設計的，而是由於其特殊的地理位置所致，球館下面一直通著地鐵。”要知道現在的北岸花園球館下方也有鐵路運行，特殊的地理位置沒變，地板也還是老地板，塞爾提克主場地板下的坑，還會再次出現嗎？</p>
+			<p>像Kobe一樣擁有一塊塞爾提克花園球館的經典地板，亞洲球迷應該是沒機會了（1998年波士頓花園球館拆毀時，曾有一批完全無法使用的地板被製成紀念品單獨出售，引起塞爾提克球迷瘋狂搶購），但想要得到一塊NBA比賽級別的地板還是有機會的，那就是去中國賽。從2004年起，NBA每年夏天都會舉行中國賽，當時去中國的除了球員、教練、裁判、啦啦隊、吉祥物，甚至球童、工作人員，還有一個重要的成員：比賽地板。</p>
+			<p>為了讓球員有家的感覺，也為了讓球迷看到完全一樣的NBA比賽，中國賽早年的地板都是從美國空運過來的，從2007年開始，中國賽地板不再運回美國，而是就地代理銷售（只是不知道現在還能否買到），2008年北京奧運會成功舉辦之後，中國終於有了NBA級別的籃球比賽場館，目前中國符合NBA標準的大型綜合性體育館有4個，分別是北京的萬事達中心、廣州的國際體育演藝中心、上海的世博文化中心，以及東莞籃球中心，2015年NBA中國賽分別在北京和上海進行，比賽還是NBA規格原汁原味，對NBA方面來說，比較方便的是，地板終於不需要再空運過來了。</p>
+			<p>實體地板講完了，虛擬地板接著講。去年6月11日總冠軍賽G3，勇士客場挑戰騎士，賽前速貸球館關閉掉了所有燈光，看起來球場還在原處，突然間地板就發生了鉅變，一會兒像是被粉碎的玻璃，一會像是燃燒的地獄，一會又像是波濤洶湧的海洋，這套被很多球迷稱為“3D地板”的技術來自Qunice Imaging公司。工作原理其實很簡單，在絕對黑暗的環境中，工作人員用幾對高強度的投影儀將地板畫面投射到場館中，通過改變不同角度和亮度水平的投影儀，產生彷彿裸眼3D一般的視覺效果，這樣的技術越來越多被應用到各隊的比賽裡，本季<span class="linkPicture" id="img5">76人的賽前的“3D地板”</span>就被美媒調侃為“這個賽季76人最好的表現。”</p>
+		</div>
+		<div id="cimg"	style="top:30%;left:5%;position: absolute;z-index:5;width:600px;height:300px;">
+		</div>
+	</div>
+
+</body>
+
+</html>

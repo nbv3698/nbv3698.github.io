@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Dallas Mavericks</title>
+    <meta charset="utf-8" />
+	<link href="subCss/ddmenu.css" rel="stylesheet" type="text/css" />
+    <script src="subJs/ddmenu.js" type="text/javascript"></script>
+    <style type="text/css">
+		body{font-family:微軟正黑體;
+		}
+		#teamName	{
+						margin-top:100px;
+						text-align:center;
+						font-size:45px;}
+		#info{
+				left: 20%;
+				width:60%;
+				top:280px;
+				position: absolute;
+				z-index:0;
+				font-size:13px; 
+				
+				 }
+		#big{ padding: 4px;	
+				top:400px;
+				left: 20%;
+				display:none;
+				position: absolute;
+				float:left;
+				}
+		#small{ padding: 4px;	
+				top:400px;				
+				left: 68%;				
+				position: absolute;
+				float:left;
+		
+				}
+		#secInfo{
+				left: 20%;
+				width:47%;
+				top:860px;
+				position: absolute;
+				z-index:0;
+				font-size:15px; 
+				align:center;
+				color:#636363;
+				 }
+		#thiInfo{
+				font-size:15px;
+				left: 20%;
+				width:40%;
+				top:1200px;
+				position: absolute;
+				align:center;
+				
+				 }		 
+		
+		.rightBarImg	{opacity:0.7;display:none;}
+		.rightBarImg:hover    {	opacity:1;}
+		
+		.myButton {
+			-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+			background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+			background-color:#007dc1;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			border:1px solid #124d77;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:13px;
+			font-weight:bold;
+			padding:8px 8px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #154682;
+		}
+		.myButton:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+			background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+			background-color:#0061a7;
+		}
+		.myButton:active {
+			position:relative;
+			top:1px;
+		}
+		/** 滑動選單 **/
+		#top,#ft,#ct {
+			position:relative;
+			cursor:pointer;
+			height:40px;
+			width:25px;
+			}
+		#top {
+			background:url(roll.png) no-repeat;
+			}
+		#ft {
+			background:url(roll.png) no-repeat 0 -80px;
+			}
+		#ct {
+			background:url(roll.png) no-repeat 0 -40px;
+			}
+			
+		#roll {
+			display:block;
+			width:25px;
+			margin-right:-520px;
+			position:fixed;
+			right:50%;
+			top:50%;
+			}
+    </style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){$("#big").fadeIn(0);});
+		window.fadeIn1 = function(obj) { $(obj).fadeIn(1500);}
+ 		window.fadeIn2 = function(obj) { $(obj).delay(1000).fadeIn(1500);}
+		window.fadeIn3 = function(obj) { $(obj).delay(2000).fadeIn(1500);}
+		window.fadeIn4 = function(obj) { $(obj).delay(3000).fadeIn(1500);}
+	</script>
+     <script src="subJs/jquery.hoverpulse.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function display(imgfile){
+			var bigImage = document.getElementById( "imgCover" );
+			var big= document.getElementById( "big" );
+			big.setAttribute("style","display:none");
+			bigImage.setAttribute( "src", "west/mavericks/"+ imgfile );
+			$(document).ready(function(){$("#big").fadeIn(1500);});
+		}
+		function start(){
+			document.getElementById( "1" ).addEventListener("click", function() { display( "1.jpg" ); }, false );
+			document.getElementById( "2" ).addEventListener("click", function() { display( "2.jpg" ); }, false );
+			document.getElementById( "3" ).addEventListener("click", function() { display( "3.jpg" ); }, false );
+			document.getElementById( "4" ).addEventListener("click", function() { display( "4.jpg" ); }, false );
+		}
+        window.addEventListener( "load", start, false );
+		<!-- 滑動選單 str -->
+		$(function(){
+			$('#top').click(function(){
+				$('html,body').animate({scrollTop: '0px'}, 800);
+			}); 
+			
+			$('#ct').click(function(){
+				$('html,body').animate({scrollTop:$('#secInfo').offset().top}, 800);
+			});
+			
+			$('#ft').click(function(){
+				$('html,body').animate({scrollTop:$('#map').offset().top}, 800);
+			});
+		});
+		<!-- 滑動選單 end -->
+		//圖片放大
+		$(document).ready(function() {
+			$("img#seat").hoverpulse({
+				size: 100,  // 圖片縮放的大小
+				speed: 500 // 圖片變換大小的速度 
+			});
+		});
+    </script>
+		
+</head>
+
+
+<body>
+
+	<!-- 滑動選單 str -->
+	<div id="roll">
+		<div title="Top" id="top"></div>
+		<div title="Introduction" id="ct"></div>
+		<div title="Buttom" id="ft"></div>
+	</div>
+	<!-- 滑動選單 end -->
+
+	<div  style="z-index:1; left:20%; width:60%; position: absolute;">
+		<img src = "west/mavericks/logo.jpg " height="200px" width="200px"  style="position:absolute;">
+        <div class="main"> 
+			<h1 id = "teamName">Dallas Mavericks</h2> 
+		</div>
+		
+		<nav id="ddmenu">
+			<ul>
+				<li class="full-width">
+					<a class="top-heading" href="index.html">HOME</a>
+				</li>
+						   
+				<li>
+					<span class="top-heading">EAST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Atlantic</h3></li>
+								<li><a href="celtics.html">Boston Celtics</a></li>
+								<li><a href="nets.html">Brooklyn Nets</a></li>
+								<li><a href="knicks.html">New York Knicks</a></li>
+								<li><a href="76ers.html">Philadelphia 76ers</a></li>
+								<li><a href="raptors.html">Toronto Raptors</a></li>
+							
+								<li><h3>Central</h3></li>
+								<li><a href="bulls.html">Chicago Bulls</a></li>
+								<li><a href="cavaliers.html">Cleveland Cavaliers</a></li>
+								<li><a href="pistons.html">Detroit Pistons</a></li>
+								<li><a href="pacers.html">Indiana Pacers</a></li>
+								<li><a href="bucks.html">Milwaukee Bucks</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southeast</h3></li>
+								<li><a href="hawks.html">Atlanta Hawks</a></li>
+								<li><a href="hornets.html">Charlotte Hornets</a></li>
+								<li><a href="heat.html">Miami Heat</a></li>
+								<li><a href="magic.html">Orlando Magic</a></li>
+								<li><a href="wizards.html">Washington Wizards</a></li>
+													
+								<li><br /><img src="east.jpg" height= "150px" width = "150px"/></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span class="top-heading">WEST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Northwest</h3></li>
+									<li><a href="nuggets.html">Denver Nuggets</a></li>
+									<li><a href="timberwolves.html">Minnesota Timberwolves</a></li>
+									<li><a href="thunder.html">Oklahoma City Thunder</a></li>
+									<li><a href="blazers.html">Portland Trail Blazers</a></li>
+									<li><a href="jazz.html">Utah Jazz</a></li>
+							
+									<li><h3>Pacific</h3></li>
+									<li><a href="warriors.html">Golden State Warriors</a></li>
+									<li><a href="clippers.html">Los Angeles Clippers</a></li>
+									<li><a href="lakers.html">Los Angeles Lakers</a></li>
+									<li><a href="suns.html">Phoenix Suns</a></li>
+									<li><a href="kings.html">Sacramento Kings</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southwest</h3></li>
+								<li><a href="mavericks.html">Dallas Mavericks</a></li>
+								<li><a href="rockets.html">Houston Rockets</a></li>
+								<li><a href="grizzlies.html">Memphis Grizzlies</a></li>
+								<li><a href="pelicans.html">New Orleans Pelicans</a></li>
+								<li><a href="spurs.html">San Antonio Spurs</a></li>
+							
+								<li><br /><img src="west.jpg" height= "150px" width = "150px" /></li>
+							</ul>
+						</div>
+					</div>
+				</li>			
+				<li>
+					<span class="top-heading">OTHERS</span>
+					<i class="caret"></i>
+					<div class="dropdown right-aligned">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Information</h3></li>
+								<li><a href="info.html">NBA球場怎麼蓋</a></li>
+								<li><a href="info2.html">NBA球場的秘密</a></li>
+							</ul>											
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		<div id = "info">
+			<h2>American Airlines Center</h2>
+			<p>
+				地址： 2500 Victory Ave, Dallas, TX 75219美國</br>
+容納人數： 18,500</br>
+			</p>
+		</div>
+				<div id = "big">
+					<img id = "imgCover" src = "west/mavericks/1.jpg" alt = "picture"  height="410px" width="635px">
+				</div>
+				<div id="small">
+					<img class ="rightBarImg" id="1" onload="fadeIn1(this)"src="west/mavericks/1.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="2" onload="fadeIn2(this)"src="west/mavericks/2.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="3" onload="fadeIn3(this)"src="west/mavericks/3.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="4" onload="fadeIn4(this)"src="west/mavericks/4.jpg" alt="picture" height="100px" width="140px";><br>
+				</div>
+				
+		<div  id = "secInfo"><p>(可點擊右側切換照片)</p>
+		1999 年 3 月 18 日，美國航空宣布以 1.95 億美元冠名贊助興建位於達拉斯的 American Airlines Center 為達拉斯小牛隊的主場館， 2001 年 7 月 17 日即落成啟用。<br><br>作為多支位於達拉斯的體育隊伍的主場球館，NHL 的達拉斯星與 AFL 的達拉斯暴徒也在其中。<br><br>另外，它亦用作舉行演唱會和一些大型活動。
+American Airlines Center 簡稱為 AAC，常常與簡稱 AAA 熱火隊主場 American Airlines Arena 搞混。American Airlines Center 也暱稱為「The House that Dirk Built」，向帶領他們成功拿下總冠軍的當家球星 Dirk Nowitzki 致敬；但另一方面也被稱為「The House that Mike Built」，那是向冰上曲棍球的主柱 Mike Modano 致意。
+		</div>
+		
+		<div id = "thiInfo">
+			<h2>SEAT MAP</h2>
+			<p style = "color:#636363;">座位資訊</p>
+			<p><img id = "seat" src = "west/mavericks/seat.jpg" alt = "seatmap" height="400px" width="400px"></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
+			<p><a href="http://www.mavs.com/tickets/" target = "_blank" class="myButton">BUY TICKET</a></p><br><br><br>
+			
+			<p>
+				<h2 id = "map">交通資訊</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13416.287838296019!2d-96.8105672!3d32.7903512!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x389e5ab1553876ca!2sAmerican+Airlines+Center!5e0!3m2!1szh-TW!2stw!4v1465479273061" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</p>
+			<br><br><br><br>
+		</div>
+			
+</body>
+
+</html>

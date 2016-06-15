@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>San Antonio Spurs</title>
+    <meta charset="utf-8" />
+	<link href="subCss/ddmenu.css" rel="stylesheet" type="text/css" />
+    <script src="subJs/ddmenu.js" type="text/javascript"></script>
+    <style type="text/css">
+		body{font-family:微軟正黑體;
+		}
+		#teamName	{
+						margin-top:100px;
+						text-align:center;
+						font-size:45px;}
+		#info{
+				left: 20%;
+				width:60%;
+				top:280px;
+				position: absolute;
+				z-index:0;
+				font-size:13px; 
+				
+				 }
+		#big{ padding: 4px;	
+				top:400px;
+				left: 20%;
+				display:none;
+				position: absolute;
+				float:left;
+				}
+		#small{ padding: 4px;	
+				top:400px;				
+				left: 68%;				
+				position: absolute;
+				float:left;
+		
+				}
+		#secInfo{
+				left: 20%;
+				width:47%;
+				top:860px;
+				position: absolute;
+				z-index:0;
+				font-size:15px; 
+				align:center;
+				color:#636363;
+				 }
+		#thiInfo{
+				font-size:15px;
+				left: 20%;
+				width:40%;
+				top:1300px;
+				position: absolute;
+				align:center;
+				
+				 }		 
+		
+		.rightBarImg	{opacity:0.7;display:none;}
+		.rightBarImg:hover    {	opacity:1;}
+		
+		.myButton {
+			-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			box-shadow:inset 0px 1px 0px 0px #54a3f7;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+			background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+			background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+			background-color:#007dc1;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			border:1px solid #124d77;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:13px;
+			font-weight:bold;
+			padding:8px 8px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #154682;
+		}
+		.myButton:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+			background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+			background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+			background-color:#0061a7;
+		}
+		.myButton:active {
+			position:relative;
+			top:1px;
+		}
+		/** 滑動選單 **/
+		#top,#ft,#ct {
+			position:relative;
+			cursor:pointer;
+			height:40px;
+			width:25px;
+			}
+		#top {
+			background:url(roll.png) no-repeat;
+			}
+		#ft {
+			background:url(roll.png) no-repeat 0 -80px;
+			}
+		#ct {
+			background:url(roll.png) no-repeat 0 -40px;
+			}
+			
+		#roll {
+			display:block;
+			width:25px;
+			margin-right:-520px;
+			position:fixed;
+			right:50%;
+			top:50%;
+			}
+    </style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){$("#big").fadeIn(0);});
+		window.fadeIn1 = function(obj) { $(obj).fadeIn(1500);}
+ 		window.fadeIn2 = function(obj) { $(obj).delay(1000).fadeIn(1500);}
+		window.fadeIn3 = function(obj) { $(obj).delay(2000).fadeIn(1500);}
+		window.fadeIn4 = function(obj) { $(obj).delay(3000).fadeIn(1500);}
+	</script>
+     <script src="subJs/jquery.hoverpulse.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function display(imgfile){
+			var bigImage = document.getElementById( "imgCover" );
+			var big= document.getElementById( "big" );
+			big.setAttribute("style","display:none");
+			bigImage.setAttribute( "src", "west/spurs/"+ imgfile );
+			$(document).ready(function(){$("#big").fadeIn(1500);});
+		}
+		function start(){
+			document.getElementById( "1" ).addEventListener("click", function() { display( "1.jpg" ); }, false );
+			document.getElementById( "2" ).addEventListener("click", function() { display( "2.jpg" ); }, false );
+			document.getElementById( "3" ).addEventListener("click", function() { display( "3.jpg" ); }, false );
+			document.getElementById( "4" ).addEventListener("click", function() { display( "4.jpg" ); }, false );
+		}
+        window.addEventListener( "load", start, false );
+		<!-- 滑動選單 str -->
+		$(function(){
+			$('#top').click(function(){
+				$('html,body').animate({scrollTop: '0px'}, 800);
+			}); 
+			
+			$('#ct').click(function(){
+				$('html,body').animate({scrollTop:$('#secInfo').offset().top}, 800);
+			});
+			
+			$('#ft').click(function(){
+				$('html,body').animate({scrollTop:$('#map').offset().top}, 800);
+			});
+		});
+		<!-- 滑動選單 end -->
+		//圖片放大
+		$(document).ready(function() {
+			$("img#seat").hoverpulse({
+				size: 100,  // 圖片縮放的大小
+				speed: 500 // 圖片變換大小的速度 
+			});
+		});
+    </script>
+		
+</head>
+
+
+<body>
+
+	<!-- 滑動選單 str -->
+	<div id="roll">
+		<div title="Top" id="top"></div>
+		<div title="Introduction" id="ct"></div>
+		<div title="Buttom" id="ft"></div>
+	</div>
+	<!-- 滑動選單 end -->
+
+	<div  style="z-index:1; left:20%; width:60%; position: absolute;">
+		<img src = "west/spurs/logo.jpg " height="200px" width="200px"  style="position:absolute; margin-top:15px;">
+        <div class="main"> 
+			<h1 id = "teamName">San Antonio Spurs</h2> 
+		</div>
+		
+		<nav id="ddmenu">
+			<ul>
+				<li class="full-width">
+					<a class="top-heading" href="index.html">HOME</a>
+				</li>
+						   
+				<li>
+					<span class="top-heading">EAST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Atlantic</h3></li>
+								<li><a href="celtics.html">Boston Celtics</a></li>
+								<li><a href="nets.html">Brooklyn Nets</a></li>
+								<li><a href="knicks.html">New York Knicks</a></li>
+								<li><a href="76ers.html">Philadelphia 76ers</a></li>
+								<li><a href="raptors.html">Toronto Raptors</a></li>
+							
+								<li><h3>Central</h3></li>
+								<li><a href="bulls.html">Chicago Bulls</a></li>
+								<li><a href="cavaliers.html">Cleveland Cavaliers</a></li>
+								<li><a href="pistons.html">Detroit Pistons</a></li>
+								<li><a href="pacers.html">Indiana Pacers</a></li>
+								<li><a href="bucks.html">Milwaukee Bucks</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southeast</h3></li>
+								<li><a href="hawks.html">Atlanta Hawks</a></li>
+								<li><a href="hornets.html">Charlotte Hornets</a></li>
+								<li><a href="heat.html">Miami Heat</a></li>
+								<li><a href="magic.html">Orlando Magic</a></li>
+								<li><a href="wizards.html">Washington Wizards</a></li>
+													
+								<li><br /><img src="east.jpg" height= "150px" width = "150px"/></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span class="top-heading">WEST</span>
+					<i class="caret"></i>
+					<div class="dropdown">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Northwest</h3></li>
+									<li><a href="nuggets.html">Denver Nuggets</a></li>
+									<li><a href="timberwolves.html">Minnesota Timberwolves</a></li>
+									<li><a href="thunder.html">Oklahoma City Thunder</a></li>
+									<li><a href="blazers.html">Portland Trail Blazers</a></li>
+									<li><a href="jazz.html">Utah Jazz</a></li>
+							
+									<li><h3>Pacific</h3></li>
+									<li><a href="warriors.html">Golden State Warriors</a></li>
+									<li><a href="clippers.html">Los Angeles Clippers</a></li>
+									<li><a href="lakers.html">Los Angeles Lakers</a></li>
+									<li><a href="suns.html">Phoenix Suns</a></li>
+									<li><a href="kings.html">Sacramento Kings</a></li>
+							</ul>
+							<ul class="column">
+								<li><h3>Southwest</h3></li>
+								<li><a href="mavericks.html">Dallas Mavericks</a></li>
+								<li><a href="rockets.html">Houston Rockets</a></li>
+								<li><a href="grizzlies.html">Memphis Grizzlies</a></li>
+								<li><a href="pelicans.html">New Orleans Pelicans</a></li>
+								<li><a href="spurs.html">San Antonio Spurs</a></li>
+							
+								<li><br /><img src="west.jpg" height= "150px" width = "150px" /></li>
+							</ul>
+						</div>
+					</div>
+				</li>			
+				<li>
+					<span class="top-heading">OTHERS</span>
+					<i class="caret"></i>
+					<div class="dropdown right-aligned">
+						<div class="dd-inner">
+							<ul class="column">
+								<li><h3>Information</h3></li>
+								<li><a href="info.html">NBA球場怎麼蓋</a></li>
+								<li><a href="info2.html">NBA球場的秘密</a></li>
+							</ul>											
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		<div id = "info">
+			<h2>AT&T Center</h2>
+			<p>
+				地址：1 AT&T Center Parkway San Antonio, Texas 78219</br>
+				容納人數：籃球: 18,581 (2009-至今), 18,797 (2002-2009)</br>
+			</p>
+		</div>
+				<div id = "big">
+					<img id = "imgCover" src = "west/spurs/1.jpg" alt = "picture"  height="410px" width="635px">
+				</div>
+				<div id="small">
+					<img class ="rightBarImg" id="1" onload="fadeIn1(this)"src="west/spurs/1.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="2" onload="fadeIn2(this)"src="west/spurs/2.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="3" onload="fadeIn3(this)"src="west/spurs/3.jpg" alt="picture" height="100px" width="140px";><br>
+					<img class ="rightBarImg" id="4" onload="fadeIn4(this)"src="west/spurs/4.jpg" alt="picture" height="100px" width="140px";><br>
+				</div>
+				
+		<div  id = "secInfo"><p>(可點擊右側切換照片)</p>
+				AT&T Center 堪稱是 NBA 全聯盟中最難以攻破的主場之一，因為只要看看馬刺主場戰績 40 勝 1 負即可一窺其中一二。<br><br>
+				原為 SBC Center 的 AT&T Center，是座室內場館，做籃球場地可容納 18000 餘人，冰上曲棍球則是 13800 人，演唱會之用的話則是 19000 人。
+				2002 年落成開幕，當時還是名為 SBC Center，直至 2005 年，因為其贊助商更換的關係，才更名為現在的 AT&T Center。 <br><br>
+
+				馬刺隊一開始是使用 The Alamodome 場館，聖安東尼奧以一八三六年美墨戰爭的遺跡 Alamo 聞名，Alamo 之意為「自然之可貴」，189 位戰士為德州的獨立而犧牲，因此一開始的場館以此為名，並寄以球員身上。<br><br> 
+
+				AT&T 公司 (收購原本的 SBC 公司) 是在 2000 年 7 月以 20 年 4100 萬美元取得馬刺球場的冠名贊助權，2002 年 9 月，AT&T 公司花費 1 億 7500 萬美元讓球場原本 2000 個座位的構造「升級」為 1 萬 8500 個座位，而馬刺在最近三個球季裡也奪下兩座總冠軍。<br><br> 
+
+				而馬刺對現在球館的重視也可從館內佈置中略知一二，不僅將所有的錦旗都印上 AT&T Center 的圖案，球場內所有電視攝影機上也都會有 AT&T Center 圖示，讓所有進場球迷可清楚地知道他們來到 AT&T Center 。此外，馬刺球場的官方網址更改為 www.attcenter.com。<br> 
+		</div>
+		
+		<div id = "thiInfo">
+			<h2>SEAT MAP</h2>
+			<p style = "color:#636363;">座位資訊</p>
+			<p><img id = "seat" src = "west/spurs/seat.jpg" alt = "seatmap" height="400px" width="400px"></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
+			<p><a href="http://www.nba.com/spurs/singlegametickets" target = "_blank" class="myButton">BUY TICKET</a></p><br><br><br>
+			
+			<p>
+				<h2 id = "map">交通資訊</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.050521487139!2d-98.44013925039724!3d29.427319782023247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865cf681b490e335%3A0xaad3c1cc2b98e0a4!2sAT%26T+Center!5e0!3m2!1szh-TW!2stw!4v1465111117959" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</p>
+			<br><br><br><br>
+		</div>
+			
+</body>
+
+</html>
